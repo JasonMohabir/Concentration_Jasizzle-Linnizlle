@@ -6,39 +6,31 @@ public class Concentration {
     //instance variables
     private Tile[][] _board;     //storage for 4x4 grid of Tiles.
     private int _numberFaceUp;   //count of Tiles with faces visible
-    private String[] _words = {"cat","dog","hello","whoo","meep","kings","rights","lefts"}
+    private String[] _words = {"cat","dog","hello","whoo","meep","kings","rights","lefts"};
     //list of unique Strings used for Tile vals
     private static int _numRows = 4;
     
     
     //insert constructor and methods here
     
-    /* 
-    public static int[] populate(int[] a){
-	for (int i = 0; i<a.length; i++){
-	    String randWord =  _words[(int)(Math.random() * _words.length)];
-	    if (freq(a,randWord) < 2){a[i] = randWord;}
-	}
-	return a;
-    } 
-    */
-
-    /*
-    public static int[] populate(int[] a){
-	for (int i = 0; i < _words.length;i++){
-	    if freq(a,_words[i]) < 2){
-
-	}
-
-    }
-
-    */
     
-    public static int freq( Object[] a, Object target ){
-	int ctrFreq = 0;
-	for (Object n: a){if (n.equals(target)) {ctrFreq +=0;}}
-	return ctrFreq;
-    }
+    public void populate(){
+	
+	for (int i = 0; i<_words.length; i+=2){
+
+	    Tile t1 = new Tile(_words[i]);
+	    Tile t2 = new Tile(_words[i+1]);
+	    
+	    for (int j = 0; j < 4; j++) {
+		_board[j][0] = t1;
+		_board[j][1] = t1;
+		_board[j][2] = t2;
+		_board[j][3] = t2;
+	    }
+	}
+	    
+    }     
+    
       
     
     //DO NOT MODIFY main()
