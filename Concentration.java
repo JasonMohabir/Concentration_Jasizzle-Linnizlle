@@ -1,4 +1,4 @@
-//Team Jasizzle Linizzle - Richard Lin, Jason Mohabir
+//Team Mirksome - Richard Lin, Sarah Yoon
 //APCS1 pd10
 //hw36 -- Some Folks Call It a Memory
 //2015-11-24
@@ -176,6 +176,9 @@ public class Concentration {
 		if (val < _board.length) {
 		    row1 = val;
 		}
+		else {
+		    System.out.println("OUT OF BOUNDS. SETTING VALUE TO 0");
+		}
 	    }
 	    catch (Exception e) {}
 	    
@@ -184,7 +187,10 @@ public class Concentration {
 		int val = Integer.parseInt(Keyboard.readString());
 		if (val < _board.length) {
 		    col1 = val;
-		}	
+		}
+		else {
+		    System.out.println("OUT OF BOUNDS. SETTING VALUE TO 0");
+		}
 	    }
 	    catch (Exception e) {}
 	    
@@ -202,6 +208,9 @@ public class Concentration {
 		if (val < _board.length) {
 		    row2 = val;
 		}
+		else {
+		    System.out.println("OUT OF BOUNDS. SETTING VALUE TO 0");
+		}
 	    }
 	    catch (Exception e) {}
 
@@ -210,6 +219,9 @@ public class Concentration {
 		int val = Integer.parseInt(Keyboard.readString());
 		if (val < _board.length) {
 		    col2 = val;
+		}
+		else {
+		    System.out.println("OUT OF BOUNDS. SETTING VALUE TO 0");
 		}
 	    }
 	    catch (Exception e) {}
