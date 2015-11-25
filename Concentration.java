@@ -122,9 +122,9 @@ public class Concentration {
     public void match(Tile first, Tile second) {
 
 	 //This case is for when people put the same coord twice
-	if (second.isFaceUp()) {
-	    first.flip();
-	    second.flip();
+	//I use the == because its the same location
+	if (first == second) {
+	    //I don't have to flip anything since that's covered by flipGame
 	    System.out.println("Nope!\n.\n.\n.");
 	}
 
@@ -136,6 +136,7 @@ public class Concentration {
 	//This case is simple inequality
 	else {
 	    first.flip();
+	    second.flip();
 	    System.out.println("Nope!\n.\n.\n.");
 	}
     }
