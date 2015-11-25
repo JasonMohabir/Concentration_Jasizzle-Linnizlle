@@ -172,13 +172,19 @@ public class Concentration {
 	    //There is a try and catch block for each input to prevent errors
 	    System.out.print("Row: ");
 	    try {
-		row1 = Integer.parseInt(Keyboard.readString());
+		int val = Integer.parseInt(Keyboard.readString());
+		if (val < _board.length) {
+		    row1 = val;
+		}
 	    }
 	    catch (Exception e) {}
 	    
 	    System.out.print("Column: ");
 	    try {
-		col1 = Integer.parseInt(Keyboard.readString());
+		int val = Integer.parseInt(Keyboard.readString());
+		if (val < _board.length) {
+		    col1 = val;
+		}	
 	    }
 	    catch (Exception e) {}
 	    
@@ -192,13 +198,19 @@ public class Concentration {
 
 	    System.out.print("Row: ");
 	    try {
-		row2 = Integer.parseInt(Keyboard.readString());
+		int val = Integer.parseInt(Keyboard.readString());
+		if (val < _board.length) {
+		    row2 = val;
+		}
 	    }
 	    catch (Exception e) {}
 
 	    System.out.print("Column: ");
 	    try {
-		col2 = Integer.parseInt(Keyboard.readString());
+		int val = Integer.parseInt(Keyboard.readString());
+		if (val < _board.length) {
+		    col2 = val;
+		}
 	    }
 	    catch (Exception e) {}
 
